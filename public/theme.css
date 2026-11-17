@@ -1,0 +1,70 @@
+:root { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+.theme-toggle { display: grid; place-items: center; flex: 0 0 38px; width: 38px; height: 38px; padding: 0; border: 1px solid #d9d5cb; border-radius: 50%; background: transparent; color: inherit; font: inherit; font-size: 19px; line-height: 1; cursor: pointer; }
+.theme-toggle:hover { background: #8882; }
+.theme-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+html[data-theme="dark"] body.theme-blog { background: #171716 !important; color: #f2f0e9 !important; }
+html[data-theme="dark"] body.theme-blog .intro,
+html[data-theme="dark"] body.theme-blog .posts article > p:last-child { color: #c1bfb7 !important; }
+html[data-theme="dark"] body.theme-blog .eyebrow,
+html[data-theme="dark"] body.theme-blog .note,
+html[data-theme="dark"] body.theme-blog .post-date { color: #aaa79e !important; }
+html[data-theme="dark"] body.theme-blog .posts,
+html[data-theme="dark"] body.theme-blog .posts article { border-color: #393832 !important; }
+html[data-theme="dark"] body.theme-blog .brand { color: #e4e1d8 !important; }
+html[data-theme="dark"] body.theme-blog .theme-toggle { border-color: #545148; }
+
+html[data-theme="dark"] body.theme-hub { background: #151612 !important; color: #f0efe8 !important; }
+html[data-theme="dark"] body.theme-hub header,
+html[data-theme="dark"] body.theme-hub footer { border-color: #383a33 !important; color: #c3c2b8 !important; }
+html[data-theme="dark"] body.theme-hub .eyebrow,
+html[data-theme="dark"] body.theme-hub .lede,
+html[data-theme="dark"] body.theme-hub .card-description { color: #b4b4aa !important; }
+html[data-theme="dark"] body.theme-hub .card { border-color: #383a33 !important; }
+html[data-theme="dark"] body.theme-hub .card:hover { background: #22241f !important; border-color: #56594e !important; }
+html[data-theme="dark"] body.theme-hub .mark { background: #fff !important; }
+
+html[data-theme="light"] body.theme-labs { background: #f6f6f1 !important; color: #232720 !important; }
+html[data-theme="light"] body.theme-labs header,
+html[data-theme="light"] body.theme-labs .section-heading,
+html[data-theme="light"] body.theme-labs footer { border-color: #dfe2d9 !important; }
+html[data-theme="light"] body.theme-labs .brand,
+html[data-theme="light"] body.theme-labs .back,
+html[data-theme="light"] body.theme-labs .intro,
+html[data-theme="light"] body.theme-labs .empty p,
+html[data-theme="light"] body.theme-labs footer { color: #586158 !important; }
+html[data-theme="light"] body.theme-labs .eyebrow,
+html[data-theme="light"] body.theme-labs .section-heading span,
+html[data-theme="light"] body.theme-labs .tag { color: #68795c !important; }
+html[data-theme="light"] body.theme-labs .empty h3,
+html[data-theme="light"] body.theme-labs .section-heading h2 { color: #252a23 !important; }
+html[data-theme="light"] body.theme-labs .empty a { color: #425d32 !important; border-color: #879975 !important; }
+html[data-theme="light"] body.theme-labs .brand-mark { background: #fff !important; }
+
+html[data-theme="dark"] body.theme-music { background: #191714 !important; color: #f3eee5 !important; }
+html[data-theme="dark"] body.theme-music header,
+html[data-theme="dark"] body.theme-music .section-head,
+html[data-theme="dark"] body.theme-music footer { border-color: #403a32 !important; }
+html[data-theme="dark"] body.theme-music .eyebrow,
+html[data-theme="dark"] body.theme-music .section-head > span,
+html[data-theme="dark"] body.theme-music footer,
+html[data-theme="dark"] body.theme-music .back { color: #b9ad9d !important; }
+html[data-theme="dark"] body.theme-music .intro,
+html[data-theme="dark"] body.theme-music .quiet p { color: #c2b8aa !important; }
+html[data-theme="dark"] body.theme-music .brand img { background: #fff !important; }
+
+html[data-theme="dark"] body.theme-novels { background: #191815 !important; color: #f1eee7 !important; }
+html[data-theme="dark"] body.theme-novels header,
+html[data-theme="dark"] body.theme-novels .shelf-title,
+html[data-theme="dark"] body.theme-novels footer { border-color: #403c34 !important; }
+html[data-theme="dark"] body.theme-novels .eyebrow,
+html[data-theme="dark"] body.theme-novels .shelf-title > span,
+html[data-theme="dark"] body.theme-novels .genre,
+html[data-theme="dark"] body.theme-novels footer,
+html[data-theme="dark"] body.theme-novels .back { color: #bcb19f !important; }
+html[data-theme="dark"] body.theme-novels .intro,
+html[data-theme="dark"] body.theme-novels .empty p { color: #c4bdb1 !important; }
+html[data-theme="dark"] body.theme-novels .book-mark { background: #383329 !important; border-left-color: #84745b !important; }
+html[data-theme="dark"] body.theme-novels .book-mark span { color: #e4d5bc !important; }
+html[data-theme="dark"] body.theme-novels .brand img { background: #fff !important; }

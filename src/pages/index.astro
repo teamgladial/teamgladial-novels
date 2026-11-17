@@ -7,13 +7,15 @@ const books = [];
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/gladial-mark.png" />
+    <link rel="stylesheet" href="/theme.css" />
+    <script is:inline>(() => { const saved = localStorage.getItem('gladial-theme'); document.documentElement.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); window.addEventListener('DOMContentLoaded', () => { const button = document.querySelector('[data-theme-toggle]'); if (!button) return; const sync = () => { const dark = document.documentElement.dataset.theme === 'dark'; button.textContent = dark ? '☀' : '☾'; button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode'); }; sync(); button.addEventListener('click', () => { const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = next; localStorage.setItem('gladial-theme', next); sync(); }); }); })();</script>
     <meta name="description" content="Fiction, novels, and stories published under the Gladial imprint." />
     <meta name="theme-color" content="#f1eee8" />
     <title>Fiction | Gladial</title>
   </head>
-  <body>
+  <body class="theme-novels">
     <main>
-      <header><a href="https://gladial.com" class="brand"><img src="/gladial-mark.png" alt="Gladial logo" /> GLADIAL <span>BOOKS</span></a><a href="https://gladial.com" class="back">← Gladial home</a></header>
+      <header><a href="https://gladial.com" class="brand"><img src="/gladial-mark.png" alt="Gladial logo" /> GLADIAL <span>BOOKS</span></a><a href="https://gladial.com" class="back">← Gladial home</a><button class="theme-toggle" data-theme-toggle aria-label="Switch color mode">☾</button></header>
       <section class="hero"><p class="eyebrow">STORIES FOR THE IN-BETWEEN</p><h1>Worlds to<br /><i>step into.</i></h1><p class="intro">Fiction made for lingering: novels, short stories, and the occasional strange place to get lost for a while.</p></section>
       <section class="shelf" aria-labelledby="shelf-title"><div class="shelf-title"><h2 id="shelf-title">On the shelf</h2><span>FICTION &amp; LONG-FORM STORIES</span></div>
         {books.length ? <div class="books">{books.map((book) => <article class="book"><div class="cover"><span>{book.title}</span><small>{book.author}</small></div><div><p class="genre">{book.genre}</p><h3>{book.title}</h3><p>{book.description}</p>{book.url && <a href={book.url}>Read more ↗</a>}</div></article>)}</div> : <div class="empty"><div class="book-mark"><span>G</span></div><div><h3>The first story is taking shape.</h3><p>New fiction and long-form stories will be collected here. Check back when the pages are ready to turn.</p></div></div>}
