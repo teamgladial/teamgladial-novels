@@ -1,0 +1,58 @@
+media:
+  - name: book_covers
+    label: Book covers
+    input: public/images/books
+    output: /images/books
+    extensions: [png, jpg, jpeg, webp, gif]
+    rename: safe
+content:
+  - name: books
+    label: Books and stories
+    type: collection
+    path: src/content/books
+    filename: "{fields.slug}.md"
+    view:
+      primary: title
+      fields: [title, author, category, status, draft]
+      sort: [date, title]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      - name: author
+        label: Author
+        type: string
+      - name: category
+        label: Genre or category
+        type: string
+      - name: status
+        label: Status
+        type: string
+      - name: date
+        label: Publication date
+        type: date
+      - name: description
+        label: Description
+        type: text
+      - name: coverImage
+        label: Cover image
+        type: image
+        options:
+          media: book_covers
+          path: public/images/books
+          rename: safe
+      - name: imageAlt
+        label: Cover image description
+        type: string
+      - name: url
+        label: Read or purchase link
+        type: string
+      - name: draft
+        label: Draft
+        type: boolean
